@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Booking — J's Hair Culture (Prototype)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="brand">
+      <span class="brand__zh">杰空间</span>
+      <span class="brand__en">J's Hair Culture</span>
+    </a>
+    <div class="site-header__actions">
+      <button type="button" class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span data-lang-label="en" class="lang-toggle__opt">EN</span>
+        <span class="lang-toggle__sep">/</span>
+        <span data-lang-label="zh" class="lang-toggle__opt">中</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="booking-page">
+    <div class="container booking-page__inner">
+      <p class="eyebrow" data-i18n="booking.eyebrow">BOOK &amp; PREPAY</p>
+      <h1 class="booking-page__title" data-i18n="booking.title">About this button</h1>
+      <p class="booking-page__body" data-i18n="booking.body">
+        This prototype is not connected to a payment system. In the final version, this button would open a prepay
+        checkout for this specific service through Square — the same booking and prepay feature already available
+        in your Square account, made visible here instead of hidden on a separate page.
+      </p>
+      <p class="booking-page__body" data-i18n="booking.body2">
+        To book for real, use the contact details below.
+      </p>
+      <div class="hero__actions">
+        <a href="tel:+61283858990" class="btn btn--primary" data-i18n="booking.call">Call (02) 8385 8990</a>
+        <a href="mailto:jshairculture@gmail.com" class="btn btn--ghost" data-i18n="booking.email">Email us</a>
+      </div>
+      <a href="index.html" class="back-link" id="backLink" data-i18n="booking.back">&larr; Back to the homepage</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p data-i18n="footer.disclaimer">Prototype demo by AndieyAgent — not an official website.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

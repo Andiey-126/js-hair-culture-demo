@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>J's Hair Culture · 杰空间 — Burwood Hair Studio (Prototype)</title>
+<meta name="description" content="Prototype design demo for J's Hair Culture, a hair studio in Burwood NSW.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="#hero" class="brand">
+      <span class="brand__zh">杰空间</span>
+      <span class="brand__en">J's Hair Culture</span>
+    </a>
+    <div class="site-header__actions">
+      <a class="header-call" href="tel:+61283858990" aria-label="Call J's Hair Culture">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <button type="button" class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span data-lang-label="en" class="lang-toggle__opt">EN</span>
+        <span class="lang-toggle__sep">/</span>
+        <span data-lang-label="zh" class="lang-toggle__opt">中</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__scrim"></div>
+  <div class="container hero__content">
+    <p class="hero__logotype">
+      <span class="hero__logotype-zh">杰空间</span>
+      <span class="hero__logotype-en">J's Hair Culture</span>
+      <span class="hero__logotype-note">(logo位置)</span>
+    </p>
+    <p class="eyebrow" data-i18n="hero.eyebrow">BURWOOD, NSW</p>
+    <h1 class="hero__title" data-i18n-html="hero.title">Hero headline, with a <span class="mark-circle">key phrase</span> emphasis.</h1>
+    <p class="hero__sub" data-i18n="hero.sub">One to two sentences introducing the studio.</p>
+    <div class="hero__actions">
+      <a href="booking.html" class="btn btn--primary" data-i18n="cta.book">Book Now</a>
+      <a href="#pricing" class="btn btn--ghost-light" data-i18n="cta.seePrices">See prices</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. 效果区 ============ -->
+<section class="services" id="services">
+  <div class="container">
+    <h2 class="section-title section-title--accent" data-i18n="services.eyebrow">LOOKS</h2>
+    <div class="services__scroller">
+
+      <article class="service-card">
+        <div class="img-placeholder img-placeholder--look"><span data-i18n="placeholder.img">Photo placeholder</span></div>
+        <h3 data-i18n="services.cut.name">Classic Cut</h3>
+      </article>
+
+      <article class="service-card">
+        <div class="img-placeholder img-placeholder--look"><span data-i18n="placeholder.img">Photo placeholder</span></div>
+        <h3 data-i18n="services.balayage.name">Balayage</h3>
+      </article>
+
+      <article class="service-card">
+        <div class="img-placeholder img-placeholder--look"><span data-i18n="placeholder.img">Photo placeholder</span></div>
+        <h3 data-i18n="services.color.name">Full Colour</h3>
+      </article>
+
+      <article class="service-card">
+        <div class="img-placeholder img-placeholder--look"><span data-i18n="placeholder.img">Photo placeholder</span></div>
+        <h3 data-i18n="services.perm.name">Perm Wave</h3>
+      </article>
+
+      <article class="service-card">
+        <div class="img-placeholder img-placeholder--look"><span data-i18n="placeholder.img">Photo placeholder</span></div>
+        <h3 data-i18n="services.bleach.name">Bleach &amp; Tone</h3>
+      </article>
+
+      <article class="service-card">
+        <div class="img-placeholder img-placeholder--look"><span data-i18n="placeholder.img">Photo placeholder</span></div>
+        <h3 data-i18n="services.kids.name">Kids Cut</h3>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. 造型师/团队 + 门店氛围 ============ -->
+<section class="team" id="team">
+  <div class="container">
+    <h2 class="section-title section-title--accent" data-i18n="team.eyebrow">STYLISTS &amp; STUDIO</h2>
+    <p class="section-lead" data-i18n="team.lead">Intro line building familiarity with the team, placed before the price list.</p>
+
+    <div class="team__carousel">
+      <div class="team__carousel-image">
+        <div class="team__carousel-track">
+          <div class="img-placeholder img-placeholder--look team__carousel-slide is-active"><span data-i18n="placeholder.img">Photo placeholder</span></div>
+          <div class="img-placeholder img-placeholder--look team__carousel-slide"><span data-i18n="placeholder.img">Photo placeholder</span></div>
+          <div class="img-placeholder img-placeholder--look team__carousel-slide"><span data-i18n="placeholder.img">Photo placeholder</span></div>
+          <div class="img-placeholder img-placeholder--look team__carousel-slide"><span data-i18n="placeholder.img">Photo placeholder</span></div>
+          <div class="img-placeholder img-placeholder--look team__carousel-slide"><span data-i18n="placeholder.img">Photo placeholder</span></div>
+        </div>
+        <button type="button" class="vibe-carousel__btn vibe-carousel__btn--prev" data-team-prev aria-label="Previous stylist">&lsaquo;</button>
+        <button type="button" class="vibe-carousel__btn vibe-carousel__btn--next" data-team-next aria-label="Next stylist">&rsaquo;</button>
+      </div>
+      <div class="team__carousel-info">
+        <div class="team__carousel-panel is-active">
+          <h3 data-i18n="team.founder.role">Role placeholder — e.g. Founder &amp; Lead Stylist</h3>
+          <p data-i18n="team.founder.quote">Stylist name and a short intro line.</p>
+        </div>
+        <div class="team__carousel-panel">
+          <h3 data-i18n="team.stylist1.role">Role placeholder — e.g. Senior Colourist</h3>
+          <p data-i18n="team.stylist1.quote">Stylist name and a short intro line.</p>
+        </div>
+        <div class="team__carousel-panel">
+          <h3 data-i18n="team.stylist2.role">Role placeholder — e.g. Stylist</h3>
+          <p data-i18n="team.stylist2.quote">Stylist name and a short intro line.</p>
+        </div>
+        <div class="team__carousel-panel">
+          <h3 data-i18n="team.stylist3.role">Role placeholder — e.g. Junior Stylist</h3>
+          <p data-i18n="team.stylist3.quote">Stylist name and a short intro line.</p>
+        </div>
+        <div class="team__carousel-panel">
+          <h3 data-i18n="team.stylist4.role">Role placeholder — e.g. Studio Assistant</h3>
+          <p data-i18n="team.stylist4.quote">Stylist name and a short intro line.</p>
+        </div>
+        <div class="team__carousel-dots" aria-hidden="true">
+          <span class="team__carousel-dot is-active"></span>
+          <span class="team__carousel-dot"></span>
+          <span class="team__carousel-dot"></span>
+          <span class="team__carousel-dot"></span>
+          <span class="team__carousel-dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="vibe-strip">
+      <div class="video-placeholder">
+        <span class="video-placeholder__play" aria-hidden="true"></span>
+        <span data-i18n="placeholder.video">Video placeholder</span>
+      </div>
+      <div class="vibe-carousel">
+        <div class="vibe-carousel__track">
+          <div class="img-placeholder img-placeholder--wide vibe-carousel__slide is-active"><span data-i18n="placeholder.vibeImg">Photo placeholder — studio</span></div>
+          <div class="img-placeholder img-placeholder--wide vibe-carousel__slide"><span data-i18n="placeholder.vibeImg">Photo placeholder — studio</span></div>
+          <div class="img-placeholder img-placeholder--wide vibe-carousel__slide"><span data-i18n="placeholder.vibeImg">Photo placeholder — studio</span></div>
+        </div>
+        <button type="button" class="vibe-carousel__btn vibe-carousel__btn--prev" aria-label="Previous photo">&lsaquo;</button>
+        <button type="button" class="vibe-carousel__btn vibe-carousel__btn--next" aria-label="Next photo">&rsaquo;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. 商品区 ============ -->
+<section class="products" id="products">
+  <div class="container">
+    <h2 class="section-title section-title--accent" data-i18n="products.eyebrow">PRODUCTS WE USE</h2>
+    <p class="section-lead" data-i18n="products.lead">One line noting these are the retail/professional brands used in-studio.</p>
+    <div class="products__collage">
+      <div class="img-placeholder products__tile products__tile--a" aria-label="Cadiveu"><span data-i18n="placeholder.logo">Logo placeholder</span></div>
+      <div class="img-placeholder products__tile products__tile--b"><span data-i18n="placeholder.logo">Logo placeholder</span></div>
+      <div class="img-placeholder products__tile products__tile--c"><span data-i18n="placeholder.logo">Logo placeholder</span></div>
+      <div class="img-placeholder products__tile products__tile--d"><span data-i18n="placeholder.logo">Logo placeholder</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. 价目表 + 联系方式 ============ -->
+<section class="pricing" id="pricing">
+  <div class="container pricing__grid">
+
+    <div class="pricing__table">
+      <h2 class="section-title section-title--accent" data-i18n="pricing.eyebrow">PRICING &amp; CONTACT</h2>
+      <p class="section-lead" data-i18n="pricing.lead">Each service links to a "Book" placeholder page — this reuses the prepay booking feature already available in Square.</p>
+
+      <div class="price-category">
+        <h3 data-i18n="pricing.cat.cut">Haircuts</h3>
+        <ul class="price-list">
+          <li><span data-i18n="services.kids.name">Kids Cut</span><span class="price-list__price" data-i18n="services.kids.price">From $35</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
+          <li><span data-i18n="pricing.item.womensCut">Women's Cut</span><span class="price-list__price" data-i18n="pricing.item.womensCutPrice">From $58</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
+          <li><span data-i18n="pricing.item.mensCut">Men's Cut</span><span class="price-list__price" data-i18n="pricing.item.mensCutPrice">From $45</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
+        </ul>
+      </div>
+
+      <div class="price-category">
+        <h3 data-i18n="pricing.cat.color">Colour</h3>
+        <ul class="price-list">
+          <li><span data-i18n="services.color.name">Full Colour</span><span class="price-list__price" data-i18n="services.color.price">From $128</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
+          <li><span data-i18n="services.balayage.name">Balayage</span><span class="price-list__price" data-i18n="services.balayage.price">From $228</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
+        </ul>
+      </div>
+
+      <div class="price-category">
+        <h3 data-i18n="pricing.cat.bleach">Bleach</h3>
+        <ul class="price-list">
+          <li><span data-i18n="services.bleach.name">Bleach &amp; Tone</span><span class="price-list__price" data-i18n="services.bleach.price">From $288</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
+          <li><span data-i18n="pricing.item.fullBleach">Full Head Bleach + Toner</span><span class="price-list__price" data-i18n="pricing.item.fullBleachPrice">Up to $499</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
+        </ul>
+      </div>
+
+      <div class="price-category">
+        <h3 data-i18n="pricing.cat.perm">Perm &amp; Styling</h3>
+        <ul class="price-list">
+          <li><span data-i18n="services.perm.name">Perm Wave</span><span class="price-list__price" data-i18n="services.perm.price">From $168</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
+          <li><span data-i18n="pricing.item.blowdry">Blow-dry &amp; Style</span><span class="price-list__price" data-i18n="pricing.item.blowdryPrice">From $48</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
+        </ul>
+      </div>
+
+      <p class="price-note" data-i18n="pricing.note">Example categories shown for this prototype — final menu matches your real Square price list.</p>
+    </div>
+
+    <aside class="contact-card">
+      <h3 data-i18n="contact.quickTitle">Quick contact</h3>
+      <a class="contact-row" href="tel:+61283858990">
+        <span><span class="contact-row__label" data-i18n="contact.phone">Phone</span><span class="contact-row__value">(02) 8385 8990</span></span>
+      </a>
+      <a class="contact-row" href="tel:+61415992695">
+        <span><span class="contact-row__label" data-i18n="contact.mobile">Mobile</span><span class="contact-row__value">0415 992 695</span></span>
+      </a>
+      <a class="contact-row" href="mailto:jshairculture@gmail.com">
+        <span><span class="contact-row__label" data-i18n="contact.email">Email</span><span class="contact-row__value">jshairculture@gmail.com</span></span>
+      </a>
+      <div class="contact-row contact-row--static">
+        <span><span class="contact-row__label" data-i18n="contact.wechat">WeChat</span><span class="contact-row__value">jshairculture</span></span>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<!-- ============ 6. 地址 + 营业时间/交通 ============ -->
+<section class="location" id="location">
+  <div class="container">
+    <h2 class="section-title section-title--accent" data-i18n="location.eyebrow">ADDRESS &amp; HOURS</h2>
+
+    <div class="location__grid">
+      <div class="map-embed map-embed--desktop">
+        <iframe
+          title="J's Hair Culture location map"
+          src="https://www.google.com/maps?q=63+Burwood+Road,+Burwood+NSW+2134&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <a class="map-embed map-embed--mobile" href="https://www.google.com/maps/search/?api=1&query=63+Burwood+Road%2C+Burwood+NSW+2134" target="_blank" rel="noopener" aria-label="Open location in Maps">
+        <p class="map-embed__address">63 Burwood Road, Burwood NSW 2134</p>
+      </a>
+
+      <div class="location__info">
+        <p class="location__address">63 Burwood Road, Burwood NSW 2134</p>
+        <p class="location__transit" data-i18n="location.transit">Approx. 2 minutes' walk from Westfield Burwood and Burwood train station.</p>
+        <div class="hours">
+          <h3 data-i18n="location.hoursTitle">Opening Hours</h3>
+          <ul>
+            <li><span data-i18n="location.hours.weekday">Mon – Fri</span><span>9:00 AM – 6:00 PM</span></li>
+            <li><span data-i18n="location.hours.saturday">Saturday</span><span>9:00 AM – 5:00 PM</span></li>
+            <li><span data-i18n="location.hours.sunday">Sunday</span><span data-i18n="location.hours.closed">Closed</span></li>
+          </ul>
+          <p class="hours__note" data-i18n="location.hoursNote">Example hours shown for this prototype — to confirm with the studio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. 联系方式（二次强化） ============ -->
+<section class="contact-repeat" id="contact">
+  <div class="container">
+    <h2 class="section-title section-title--accent" data-i18n="contactRepeat.eyebrow">CONTACT (REPEATED)</h2>
+    <div class="contact-repeat__grid">
+      <a class="contact-tile" href="tel:+61283858990">
+        <span class="contact-tile__label" data-i18n="contact.phone">Phone</span>
+        <span class="contact-tile__value">(02) 8385 8990</span>
+      </a>
+      <a class="contact-tile" href="mailto:jshairculture@gmail.com">
+        <span class="contact-tile__label" data-i18n="contact.email">Email</span>
+        <span class="contact-tile__value">jshairculture@gmail.com</span>
+      </a>
+      <div class="contact-tile contact-tile--static">
+        <span class="contact-tile__label" data-i18n="contact.wechat">WeChat</span>
+        <span class="contact-tile__value">jshairculture</span>
+      </div>
+      <div class="contact-tile contact-tile--static">
+        <span class="contact-tile__label">Instagram</span>
+        <span class="contact-tile__value">js_hair_culture</span>
+      </div>
+      <div class="contact-tile contact-tile--static">
+        <span class="contact-tile__label" data-i18n="contact.xhs">Xiaohongshu</span>
+        <span class="contact-tile__value">杰空间 js hair culture</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. 底部预约按钮 ============ -->
+<section class="final-cta">
+  <div class="container final-cta__inner">
+    <a href="booking.html" class="btn btn--primary btn--large" data-i18n="cta.book">Book Now</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ 9. FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p data-i18n="footer.disclaimer">Prototype demo by AndieyAgent — not an official website.</p>
+  </div>
+</footer>
+
+<!-- ============ 悬浮吸底 CTA ============ -->
+<a href="booking.html" class="floating-cta" id="floatingCta">
+  <span class="mark-box" data-i18n="cta.book">Book Now</span>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
