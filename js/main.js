@@ -39,7 +39,7 @@
         lead: "One line noting these are the retail/professional brands used in-studio."
       },
       pricing: {
-        eyebrow: "PRICING & CONTACT",
+        eyebrow: "PRICING",
         lead: "Each service links to a \"Book\" placeholder page — this reuses the prepay booking feature already available in Square.",
         cat: { cut: "Haircuts", color: "Colour", bleach: "Bleach", perm: "Perm & Styling" },
         item: {
@@ -51,7 +51,6 @@
         note: "Example categories shown for this prototype — final menu matches your real Square price list."
       },
       contact: {
-        quickTitle: "Quick contact",
         phone: "Phone", mobile: "Mobile", email: "Email", wechat: "WeChat", xhs: "Xiaohongshu"
       },
       location: {
@@ -111,7 +110,7 @@
         lead: "一句话说明这些是店内实际使用/零售的产品品牌。"
       },
       pricing: {
-        eyebrow: "价目表 + 联系方式",
+        eyebrow: "价目表",
         lead: "每个项目旁边的按钮链接到「预定」占位说明页——这个功能复用了 Square 后台已有的预付预定能力。",
         cat: { cut: "剪发系列", color: "染发系列", bleach: "漂发系列", perm: "烫发/造型" },
         item: {
@@ -123,7 +122,6 @@
         note: "此处分类为 demo 示例结构，正式上线时会替换成你们真实的 Square 价目表。"
       },
       contact: {
-        quickTitle: "快速联系",
         phone: "电话", mobile: "手机", email: "邮箱", wechat: "微信", xhs: "小红书"
       },
       location: {
@@ -265,11 +263,39 @@
     }
   }
 
+  /* ============ Header contact popover ============ */
+  function initContactPopover() {
+    var toggle = document.getElementById("contactToggle");
+    var popover = document.getElementById("contactPopover");
+    if (!toggle || !popover) return;
+
+    function close() {
+      popover.hidden = true;
+      toggle.setAttribute("aria-expanded", "false");
+    }
+    function open() {
+      popover.hidden = false;
+      toggle.setAttribute("aria-expanded", "true");
+    }
+
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      if (popover.hidden) open(); else close();
+    });
+    document.addEventListener("click", function (e) {
+      if (!popover.hidden && !popover.contains(e.target) && e.target !== toggle) close();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") close();
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initLang();
     initFloatingCta();
     initVibeCarousel();
     initTeamCarousel();
     initBackLink();
+    initContactPopover();
   });
 })();
