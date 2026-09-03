@@ -19,11 +19,11 @@
       services: {
         eyebrow: "LOOKS",
         cut: { name: "Classic Cut" },
-        balayage: { name: "Balayage", price: "From $228" },
-        color: { name: "Full Colour", price: "From $128" },
-        perm: { name: "Perm Wave", price: "From $168" },
-        bleach: { name: "Bleach & Tone", price: "From $288" },
-        kids: { name: "Kids Cut", price: "From $35" }
+        balayage: { name: "Balayage", price: "$228" },
+        color: { name: "Full Colour", price: "$128" },
+        perm: { name: "Perm Wave", price: "$168" },
+        bleach: { name: "Bleach & Tone", price: "$288" },
+        kids: { name: "Kids Cut", price: "$35" }
       },
       team: {
         eyebrow: "STYLISTS & STUDIO",
@@ -43,10 +43,10 @@
         lead: "Each service links to a \"Book\" placeholder page — this reuses the prepay booking feature already available in Square.",
         cat: { cut: "Haircuts", color: "Colour", bleach: "Bleach", perm: "Perm & Styling" },
         item: {
-          womensCut: "Women's Cut", womensCutPrice: "From $58",
-          mensCut: "Men's Cut", mensCutPrice: "From $45",
-          fullBleach: "Full Head Bleach + Toner", fullBleachPrice: "Up to $499",
-          blowdry: "Blow-dry & Style", blowdryPrice: "From $48"
+          womensCut: "Women's Cut", womensCutPrice: "$58",
+          mensCut: "Men's Cut", mensCutPrice: "$45",
+          fullBleach: "Full Head Bleach + Toner", fullBleachPrice: "$499",
+          blowdry: "Blow-dry & Style", blowdryPrice: "$48"
         },
         note: "Example categories shown for this prototype — final menu matches your real Square price list."
       },
@@ -66,11 +66,11 @@
       footer: { disclaimer: "Prototype demo by AndieyAgent — not an official website." },
       booking: {
         eyebrow: "BOOK & PREPAY",
-        title: "About this button",
-        body: "This prototype is not connected to a payment system. In the final version, this button would open a prepay checkout for this specific service through Square — the same booking and prepay feature already available in your Square account, made visible here instead of hidden on a separate page.",
-        body2: "To book for real, use the contact details below.",
-        call: "Call (02) 8385 8990",
-        email: "Email us",
+        title: "Confirm your booking",
+        body: "This prototype is not connected to a payment system. In the final version, this button would open a Square prepay checkout for the services above.",
+        empty: "You haven't selected any services yet — head back to the <a href=\"index.html#pricing\">price list</a> to add some.",
+        total: "Total",
+        pay: "Pay now",
         back: "← Back to the homepage"
       }
     },
@@ -90,11 +90,11 @@
       services: {
         eyebrow: "效果区",
         cut: { name: "基础剪发" },
-        balayage: { name: "挑染", price: "$228 起" },
-        color: { name: "全染", price: "$128 起" },
-        perm: { name: "烫发", price: "$168 起" },
-        bleach: { name: "漂发调色", price: "$288 起" },
-        kids: { name: "儿童剪发", price: "$35 起" }
+        balayage: { name: "挑染", price: "$228" },
+        color: { name: "全染", price: "$128" },
+        perm: { name: "烫发", price: "$168" },
+        bleach: { name: "漂发调色", price: "$288" },
+        kids: { name: "儿童剪发", price: "$35" }
       },
       team: {
         eyebrow: "造型师/团队 + 门店氛围",
@@ -114,10 +114,10 @@
         lead: "每个项目旁边的按钮链接到「预定」占位说明页——这个功能复用了 Square 后台已有的预付预定能力。",
         cat: { cut: "剪发系列", color: "染发系列", bleach: "漂发系列", perm: "烫发/造型" },
         item: {
-          womensCut: "女士剪发", womensCutPrice: "$58 起",
-          mensCut: "男士剪发", mensCutPrice: "$45 起",
-          fullBleach: "全头漂发+调色", fullBleachPrice: "最高 $499",
-          blowdry: "吹风造型", blowdryPrice: "$48 起"
+          womensCut: "女士剪发", womensCutPrice: "$58",
+          mensCut: "男士剪发", mensCutPrice: "$45",
+          fullBleach: "全头漂发+调色", fullBleachPrice: "$499",
+          blowdry: "吹风造型", blowdryPrice: "$48"
         },
         note: "此处分类为 demo 示例结构，正式上线时会替换成你们真实的 Square 价目表。"
       },
@@ -137,15 +137,51 @@
       footer: { disclaimer: "Prototype demo by AndieyAgent · 非官方页面，仅供设计演示。" },
       booking: {
         eyebrow: "预定+预付",
-        title: "关于这个按钮",
-        body: "这个 demo 暂未接入真实支付系统。正式版本中，这个按钮会直接打开该项目在 Square 的预付页面——这是你们 Square 账号里已有的功能，这里只是把它展示出来。",
-        body2: "如需真实预约，请使用下方联系方式。",
-        call: "拨打 (02) 8385 8990",
-        email: "发邮件",
+        title: "确认预约",
+        body: "这个 demo 暂未接入真实支付系统。正式版本中，这个按钮会为以上服务打开 Square 的预付页面。",
+        empty: "还没有选择任何服务——回到<a href=\"index.html#pricing\">价目表</a>挑选后再来支付。",
+        total: "总计",
+        pay: "立即支付",
         back: "← 返回主页"
       }
     }
   };
+
+  /* ============ Service catalogue (id -> i18n key paths), shared by the price list and the checkout page ============ */
+  var SERVICE_CATALOG = {
+    kids: { name: "services.kids.name", price: "services.kids.price", amount: 35 },
+    womensCut: { name: "pricing.item.womensCut", price: "pricing.item.womensCutPrice", amount: 58 },
+    mensCut: { name: "pricing.item.mensCut", price: "pricing.item.mensCutPrice", amount: 45 },
+    color: { name: "services.color.name", price: "services.color.price", amount: 128 },
+    balayage: { name: "services.balayage.name", price: "services.balayage.price", amount: 228 },
+    bleach: { name: "services.bleach.name", price: "services.bleach.price", amount: 288 },
+    fullBleach: { name: "pricing.item.fullBleach", price: "pricing.item.fullBleachPrice", amount: 499 },
+    perm: { name: "services.perm.name", price: "services.perm.price", amount: 168 },
+    blowdry: { name: "pricing.item.blowdry", price: "pricing.item.blowdryPrice", amount: 48 }
+  };
+  var CART_KEY = "jhc-cart";
+
+  function getCart() {
+    var cart;
+    try {
+      cart = JSON.parse(sessionStorage.getItem(CART_KEY) || "{}");
+    } catch (e) {
+      cart = {};
+    }
+    var clean = {};
+    Object.keys(cart).forEach(function (id) {
+      if (SERVICE_CATALOG[id] && cart[id] > 0) clean[id] = cart[id];
+    });
+    return clean;
+  }
+
+  function setCart(cart) {
+    sessionStorage.setItem(CART_KEY, JSON.stringify(cart));
+  }
+
+  function cartTotalQty(cart) {
+    return Object.keys(cart).reduce(function (sum, id) { return sum + cart[id]; }, 0);
+  }
 
   function getPath(obj, path) {
     return path.split(".").reduce(function (acc, key) {
@@ -167,6 +203,8 @@
       var value = getPath(dict, el.getAttribute("data-i18n-html"));
       if (value !== undefined) el.innerHTML = value;
     });
+
+    document.dispatchEvent(new CustomEvent("jhc:langchange"));
   }
 
   function detectLang() {
@@ -190,21 +228,122 @@
     }
   }
 
-  /* ============ Floating CTA: hide once the final CTA is in view ============ */
-  function initFloatingCta() {
-    var floatingCta = document.getElementById("floatingCta");
-    var finalCta = document.querySelector(".final-cta");
-    if (!floatingCta || !finalCta || !("IntersectionObserver" in window)) return;
+  /* ============ Price list: per-service qty stepper feeding a cart, badge on the floating CTA ============ */
+  function initPricingCart() {
+    var rows = document.querySelectorAll(".price-list li[data-service-id]");
+    if (!rows.length) return;
 
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          floatingCta.classList.toggle("is-hidden", entry.isIntersecting);
-        });
-      },
-      { rootMargin: "0px 0px -10% 0px" }
-    );
-    observer.observe(finalCta);
+    var floatingBadge = document.getElementById("floatingCtaBadge");
+
+    function render() {
+      var dict = DICT[document.documentElement.getAttribute("data-lang")] || DICT.en;
+      var cart = getCart();
+
+      rows.forEach(function (li) {
+        var id = li.dataset.serviceId;
+        var qty = cart[id] || 0;
+        var action = li.querySelector("[data-qty-action]");
+        action.innerHTML = "";
+
+        if (qty === 0) {
+          var addBtn = document.createElement("button");
+          addBtn.type = "button";
+          addBtn.className = "btn-tiny";
+          addBtn.textContent = getPath(dict, "cta.bookPrepay") || "Book";
+          addBtn.addEventListener("click", function () {
+            cart[id] = 1;
+            setCart(cart);
+            render();
+          });
+          action.appendChild(addBtn);
+        } else {
+          var stepper = document.createElement("div");
+          stepper.className = "qty-stepper";
+
+          var minus = document.createElement("button");
+          minus.type = "button";
+          minus.className = "qty-stepper__btn";
+          minus.setAttribute("aria-label", "-1");
+          minus.textContent = "−";
+          minus.addEventListener("click", function () {
+            if (cart[id] > 1) cart[id] -= 1; else delete cart[id];
+            setCart(cart);
+            render();
+          });
+
+          var count = document.createElement("span");
+          count.className = "qty-stepper__count";
+          count.textContent = qty;
+
+          var plus = document.createElement("button");
+          plus.type = "button";
+          plus.className = "qty-stepper__btn";
+          plus.setAttribute("aria-label", "+1");
+          plus.textContent = "+";
+          plus.addEventListener("click", function () {
+            cart[id] = qty + 1;
+            setCart(cart);
+            render();
+          });
+
+          stepper.appendChild(minus);
+          stepper.appendChild(count);
+          stepper.appendChild(plus);
+          action.appendChild(stepper);
+        }
+      });
+
+      if (floatingBadge) {
+        var total = cartTotalQty(cart);
+        floatingBadge.hidden = total === 0;
+        floatingBadge.textContent = total;
+      }
+    }
+
+    document.addEventListener("jhc:langchange", render);
+    render();
+  }
+
+  /* ============ Checkout page: render the cart carried over from the price list ============ */
+  function initCheckoutPage() {
+    var hasItemsBlock = document.getElementById("checkoutHasItems");
+    var emptyBlock = document.getElementById("checkoutEmpty");
+    var list = document.getElementById("checkoutList");
+    var totalAmount = document.getElementById("checkoutTotalAmount");
+    var payBtn = document.getElementById("checkoutPayBtn");
+    if (!hasItemsBlock || !emptyBlock || !list || !totalAmount || !payBtn) return;
+
+    function render() {
+      var dict = DICT[document.documentElement.getAttribute("data-lang")] || DICT.en;
+      var cart = getCart();
+      var ids = Object.keys(cart);
+
+      hasItemsBlock.hidden = ids.length === 0;
+      emptyBlock.hidden = ids.length > 0;
+      payBtn.disabled = ids.length === 0;
+
+      list.innerHTML = "";
+      var total = 0;
+      ids.forEach(function (id) {
+        var entry = SERVICE_CATALOG[id];
+        total += entry.amount * cart[id];
+
+        var li = document.createElement("li");
+        var name = document.createElement("span");
+        name.className = "price-list__name";
+        name.textContent = (getPath(dict, entry.name) || id) + " × " + cart[id];
+        var price = document.createElement("span");
+        price.className = "price-list__price";
+        price.textContent = "$" + entry.amount;
+        li.appendChild(name);
+        li.appendChild(price);
+        list.appendChild(li);
+      });
+      totalAmount.textContent = "$" + total;
+    }
+
+    document.addEventListener("jhc:langchange", render);
+    render();
   }
 
   /* ============ Vibe carousel: prev/next through slides ============ */
@@ -292,7 +431,8 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     initLang();
-    initFloatingCta();
+    initPricingCart();
+    initCheckoutPage();
     initVibeCarousel();
     initTeamCarousel();
     initBackLink();

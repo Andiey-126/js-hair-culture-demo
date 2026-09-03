@@ -71,7 +71,6 @@
     <h1 class="hero__title" data-i18n-html="hero.title">Hero headline, with a <span class="mark-circle">key phrase</span> emphasis.</h1>
     <p class="hero__sub" data-i18n="hero.sub">One to two sentences introducing the studio.</p>
     <div class="hero__actions">
-      <a href="booking.html" class="btn btn--primary" data-i18n="cta.book">Book Now</a>
       <a href="#pricing" class="btn btn--ghost-light" data-i18n="cta.seePrices">See prices</a>
     </div>
   </div>
@@ -209,33 +208,33 @@
       <div class="price-category">
         <h3 data-i18n="pricing.cat.cut">Haircuts</h3>
         <ul class="price-list">
-          <li><span data-i18n="services.kids.name">Kids Cut</span><span class="price-list__price" data-i18n="services.kids.price">From $35</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
-          <li><span data-i18n="pricing.item.womensCut">Women's Cut</span><span class="price-list__price" data-i18n="pricing.item.womensCutPrice">From $58</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
-          <li><span data-i18n="pricing.item.mensCut">Men's Cut</span><span class="price-list__price" data-i18n="pricing.item.mensCutPrice">From $45</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
+          <li data-service-id="kids"><span class="price-list__name" data-i18n="services.kids.name">Kids Cut</span><span class="price-list__price" data-i18n="services.kids.price">$35</span><span class="price-list__action" data-qty-action></span></li>
+          <li data-service-id="womensCut"><span class="price-list__name" data-i18n="pricing.item.womensCut">Women's Cut</span><span class="price-list__price" data-i18n="pricing.item.womensCutPrice">$58</span><span class="price-list__action" data-qty-action></span></li>
+          <li data-service-id="mensCut"><span class="price-list__name" data-i18n="pricing.item.mensCut">Men's Cut</span><span class="price-list__price" data-i18n="pricing.item.mensCutPrice">$45</span><span class="price-list__action" data-qty-action></span></li>
         </ul>
       </div>
 
       <div class="price-category">
         <h3 data-i18n="pricing.cat.color">Colour</h3>
         <ul class="price-list">
-          <li><span data-i18n="services.color.name">Full Colour</span><span class="price-list__price" data-i18n="services.color.price">From $128</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
-          <li><span data-i18n="services.balayage.name">Balayage</span><span class="price-list__price" data-i18n="services.balayage.price">From $228</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
+          <li data-service-id="color"><span class="price-list__name" data-i18n="services.color.name">Full Colour</span><span class="price-list__price" data-i18n="services.color.price">$128</span><span class="price-list__action" data-qty-action></span></li>
+          <li data-service-id="balayage"><span class="price-list__name" data-i18n="services.balayage.name">Balayage</span><span class="price-list__price" data-i18n="services.balayage.price">$228</span><span class="price-list__action" data-qty-action></span></li>
         </ul>
       </div>
 
       <div class="price-category">
         <h3 data-i18n="pricing.cat.bleach">Bleach</h3>
         <ul class="price-list">
-          <li><span data-i18n="services.bleach.name">Bleach &amp; Tone</span><span class="price-list__price" data-i18n="services.bleach.price">From $288</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
-          <li><span data-i18n="pricing.item.fullBleach">Full Head Bleach + Toner</span><span class="price-list__price" data-i18n="pricing.item.fullBleachPrice">Up to $499</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
+          <li data-service-id="bleach"><span class="price-list__name" data-i18n="services.bleach.name">Bleach &amp; Tone</span><span class="price-list__price" data-i18n="services.bleach.price">$288</span><span class="price-list__action" data-qty-action></span></li>
+          <li data-service-id="fullBleach"><span class="price-list__name" data-i18n="pricing.item.fullBleach">Full Head Bleach + Toner</span><span class="price-list__price" data-i18n="pricing.item.fullBleachPrice">$499</span><span class="price-list__action" data-qty-action></span></li>
         </ul>
       </div>
 
       <div class="price-category">
         <h3 data-i18n="pricing.cat.perm">Perm &amp; Styling</h3>
         <ul class="price-list">
-          <li><span data-i18n="services.perm.name">Perm Wave</span><span class="price-list__price" data-i18n="services.perm.price">From $168</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
-          <li><span data-i18n="pricing.item.blowdry">Blow-dry &amp; Style</span><span class="price-list__price" data-i18n="pricing.item.blowdryPrice">From $48</span><a href="booking.html" class="btn-tiny" data-i18n="cta.bookPrepay">Book</a></li>
+          <li data-service-id="perm"><span class="price-list__name" data-i18n="services.perm.name">Perm Wave</span><span class="price-list__price" data-i18n="services.perm.price">$168</span><span class="price-list__action" data-qty-action></span></li>
+          <li data-service-id="blowdry"><span class="price-list__name" data-i18n="pricing.item.blowdry">Blow-dry &amp; Style</span><span class="price-list__price" data-i18n="pricing.item.blowdryPrice">$48</span><span class="price-list__action" data-qty-action></span></li>
         </ul>
       </div>
 
@@ -310,12 +309,6 @@
   </div>
 </section>
 
-<!-- ============ 8. 底部预约按钮 ============ -->
-<section class="final-cta">
-  <div class="container final-cta__inner">
-    <a href="booking.html" class="btn btn--primary btn--large" data-i18n="cta.book">Book Now</a>
-  </div>
-</section>
 
 </main>
 
@@ -329,6 +322,7 @@
 <!-- ============ 悬浮吸底 CTA ============ -->
 <a href="booking.html" class="floating-cta" id="floatingCta">
   <span class="mark-box" data-i18n="cta.book">Book Now</span>
+  <span class="floating-cta__badge" id="floatingCtaBadge" hidden></span>
 </a>
 
 <script src="js/main.js"></script>
